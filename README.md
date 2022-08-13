@@ -1,29 +1,47 @@
 # Running Commands (13 Aug)
 Notes for KUKA project
 
-# Open Manipulator + YOLO
+# 1. Open Manipulator + YOLO
 
-To run open manipulator simulation with rviz point cloud, please run 
+- First, show the system architecture diagram and explain the project.
+
+- To run open manipulator simulation with rviz point cloud, please run 
 ```
 roslaunch open_manipulator_gazebo open_manipulator_gazebo.launch
 ```
 in new terminal.
 
-If you want to detect objects (currently supports coca cola cans), while open manipulator is running, run this in another terminal
+- If you want to detect objects (currently supports coca cola cans), while open manipulator is running, run this in another terminal
 
 ```
 rosservice call /yolodetect
 ```
 
-# Grasp Estimation
+# 2. Grasp Estimation
 
-To demonstrate grip estimation around point cloud, use the following - 
+- To demonstrate grip estimation around point cloud, use the following - 
 ```
 cd /home/silvey/catkin_ws/gpd/build
 ./detect_grasps ../cfg/eigen_params.cfg ../tutorials/krylon.pcd
 ```
-Press Q to go through the process
+- Press Q to go through the process
 
+# 3. Show KUKA IIWA not working
+
+- The problem with KUKA iiwa is that we can see the motion planning in rviz, but it is not simulated in Gazebo
+
+- Try to run and motion plan with the following command
+```
+roslaunch iiwa_moveit moveit_planning_execution.launch sim:=true     
+```
+
+
+# To clarify with Kinesis Lab
+
+- Can we have a 2 finger gripper? If so, what are the ros-packages? What topic and message should I publish to control it?
+- Can we have Microsoft Kinect (or any other camera which can give point cloud for grasp estimation). 
+- What is the best (or usual way) to segment and clean up the point clouds? Any suggestions?
+- How to connect to KUKA iiwa? What topics and messages should I publish to control it? Does it support Inverse Kinematics?
 
 
 ---
