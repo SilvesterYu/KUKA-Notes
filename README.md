@@ -39,13 +39,12 @@ roslaunch iiwa_moveit moveit_planning_execution.launch sim:=true
 # To clarify with Kinesis Lab
 
 - Can we have a 2 finger gripper? If so, what are the ros-packages? What topic and message should I publish to control it?
-- Can we have 2 Microsoft Kinect (or any other depth camera which can give point cloud for grasp estimation). 
-- For the Camera , I am planning to use an Intel D455i camera on the KUKA arm, as recommended by Prof. Tzes. May I know if the lab has it? and if it is, is there a ROS package that the lab is using?
-
-- What is the best (or usual way) to segment and clean up the point clouds? Any suggestions?
+- For the Camera , I am planning to use 2 Intel D455i camera on the KUKA arm, as recommended by Prof. Tzes. May I know if the lab has it? and if it is, is there a ROS package that the lab is using? (Can I get point clouds and RGB data from it?)
+- What is the best (or usual way) to segment and clean up the point clouds? Any suggestions? 
 - How to connect to KUKA iiwa? What topics and messages should I publish to control it? Does it support Inverse Kinematics?
 
 
+# End of meeting with Kinesis
 ---
 
 
