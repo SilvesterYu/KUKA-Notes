@@ -1,7 +1,32 @@
 # Running Commands (13 Aug)
 Notes for KUKA project
 
+# Open Manipulator + YOLO
 
+To run open manipulator simulation with rviz point cloud, please run 
+```
+roslaunch open_manipulator_gazebo open_manipulator_gazebo.launch
+```
+in new terminal.
+
+If you want to detect objects (currently supports coca cola cans), while open manipulator is running, run this in another terminal
+
+```
+rosservice call /yolodetect
+```
+
+# Grasp Estimation
+
+To demonstrate grip estimation around point cloud, use the following - 
+```
+cd /home/silvey/catkin_ws/gpd/build
+./detect_grasps ../cfg/eigen_params.cfg ../tutorials/krylon.pcd
+```
+Press Q to go through the process
+
+
+
+---
 
 
 # General Setup Notes
