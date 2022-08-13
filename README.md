@@ -217,3 +217,6 @@ weights_file = /home/silvey/catkin_ws/gpd/models/lenet/15channels/params/
 
 More info at : https://www2.ccs.neu.edu/research/helpinghands/code/gpd/
 
+-----
+How to segment the table or plane from point cloud
+(https://towardsdatascience.com/how-to-automate-3d-point-cloud-segmentation-and-clustering-with-python-343c9039e4f5)
